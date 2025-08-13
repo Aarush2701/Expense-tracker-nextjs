@@ -1,0 +1,317 @@
+
+*,
+::before,
+::after{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+label{
+  font-size: 20px;
+}
+
+html,
+body{
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+}
+
+.App{
+    display: flex;
+    gap: 100px;
+    justify-content: center;  
+    align-items: center;      
+    height: 100vh;
+}
+
+.container{
+  background-color: #FFF;
+  padding: 32px 48px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+}
+
+.container > h1{
+  margin-bottom: 20px;
+}
+
+.container > form{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.container div{
+  display: flex;
+  flex-direction: column;
+}
+
+.container input{
+  width: 100%;
+  font-size: 20px;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid black;
+}
+
+.container input::placeholder{
+  font-size: 12px;
+  font-style: italic;
+}
+
+button{
+  background-color: purple;
+  border: none;
+  font-size: 15px;
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  margin: 10px 0;
+}
+
+.user-section{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.expense-list {
+  font-family: Arial, sans-serif;
+  margin-top: 20px;
+  overflow-y: auto;
+  height: 80vh;
+}
+
+.expense-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 3px solid #ccc;
+  margin-bottom: -3px;
+}
+
+.expense-description {
+  font-weight: bold;
+  padding-left: 20px;
+}
+
+.delete-button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 4px 7px;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 3px;
+  margin-left: 10px;
+}
+
+.delete-button:hover {
+  background-color: #c0392b;
+}
+
+.amounts-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+}
+
+.income-amount {
+  color: #27ae60;
+  font-weight: bold;
+}
+
+.expense-amount{
+  color: #c0392b;
+  font-weight: bold;
+  padding-left: 20px;
+  padding-right: 10px;
+}
+
+.piechart{
+  padding-right: 30px;
+  height: 600px;
+  width:600px;
+}
+
+.recharts-legend-wrapper{
+  padding-top: 20px;
+}
+
+.piechartdiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  overflow: visible;
+}
+
+.piecharthead{
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: black;
+}
+
+.piechart-empty {
+  font-size: 16px;
+  color: #555;
+}
+
+.mainhead{
+  margin-top: 10px;
+}
+
+.logbtn{
+  margin-left: 5px;
+}
+
+.nodeelement{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100vh;
+}
+
+.txnloghead{
+  display: flex;
+  justify-content: center;
+  font-weight: 700;
+  
+}
+
+@media (max-width: 410px) {
+  body {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 8px;
+  }
+
+  .App {
+    flex-direction: column;
+    gap: 16px;
+    padding: 0 8px;
+    width: 100%;
+    height: auto;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 100%;
+    padding: 12px;
+    box-shadow: none;
+    border-radius: 5px;
+  }
+
+  .container > h1 {
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+
+  .container input {
+    font-size: 14px;
+    padding: 6px;
+  }
+
+  .container input::placeholder {
+    font-size: 10px;
+  }
+
+  label {
+    font-size: 16px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .user-section {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .piechart {
+    /* width: 80%;
+    height: auto; */
+    padding: 0;
+  }
+
+  .piechartdiv {
+    /* width: 80%;
+    padding: 0; */
+    margin-top: 10px;
+  }
+
+  .piecharthead {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .amounts-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    font-size: 14px;
+  }
+
+  .expense-list {
+    height: auto;
+    max-height: 280px;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .expense-item {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px;
+    width: 100%;
+    font-size: 13px;
+  }
+
+  .expense-description {
+    padding-left: 0;
+  }
+
+  .delete-button {
+    margin-top: 5px;
+    font-size: 13px;
+    padding: 4px 6px;
+  }
+
+  .logbtn {
+    margin-left: 0;
+    margin-top: 6px;
+  }
+
+  .txnloghead {
+    font-size: 16px;
+    text-align: center;
+    padding: 8px;
+  }
+
+  .mainhead {
+    margin-top: 6px;
+    font-size: 18px;
+  }
+  .nodeelement{
+    height: 55vh;
+}
+}
